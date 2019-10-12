@@ -1,0 +1,203 @@
+
+<div class="row">
+  <div class="col-md-6">
+        <div class="col-auto">
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Nom du Fournisseur: </div>
+            </div>
+            <input type="text"
+                   class="form-control"
+                  value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Adresse : </div>
+            </div>
+            <input type="text"
+                   class="form-control"
+                  value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">RC n°: </div>
+            </div>
+            <input type="text"
+                   class="form-control"
+                  value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Patente n°: </div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">IF n°: </div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+                  
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">CNSS n°: </div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Compte: </div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">ICE :</div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Devis n°: </div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+          </div>
+    
+        </div>
+      </div>
+
+<div class="col-md-6">
+        <div class="col-auto">
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Exercice : </div>
+            </div>
+            <input type="text"
+                   class="form-control"
+                  value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Budget : </div>
+            </div>
+            <input type="text"
+                   class="form-control"
+                  value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">PAR : </div>
+            </div>
+            <input type="text"
+                   class="form-control"
+                  value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" value="1">LRG : </div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+          </div>
+    
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Ligne : </div>
+            </div>
+            <input type="text"
+                   class="form-control" value="">
+          </div>
+    
+        </div>
+  </div>
+
+  
+  <div class="col-md-12">
+        
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Objet du Bon de Commande: </div>
+            </div>
+            <input type="text"
+                   class="form-control"
+                  value="">
+          </div>
+    
+        
+    
+    
+      </div>
+       
+</div>
+
+
+
+
+<table class="table table-sm table-bordered" > 
+<thead class="thead-light">
+  <tr > 
+    <td class="align-middle">Produits </td>
+    <td >Désignation</td>
+    <td>Unité</td>
+    <td>Quantité</td>
+    <td >P.U Hors TVA</td>
+    <td >Prix Total Hors TVA</td>
+  </tr>
+</thead>
+  <tr > 
+    <td ></td>
+    <td > </td>
+    <td >U</td>
+    <td align ="right" ></td>
+    <td >  </td>
+    <td ></td>
+  </tr>
+  
+ 
+
+
+
+  <tr >
+    <td colspan="2" rowspan="2" >Délai exécution : 4 mois à partir de la réception du bc</td>
+    <td colspan="3" >TVA 20 %</td>
+    <td >  </td>
+  </tr>
+
+  <tr > 
+    <td colspan="3" >TTC</td>
+    <td></td>
+  </tr>
+
+  <tr >
+    <td colspan="2" >Le présent BC est arrêté à la somme de :</td>
+    <td colspan="4" >  
+    </td>
+  </tr>
+
+  
+</tbody>
+</table>
+
+<form  (ngSubmit)="onSubmit()" #f="ngForm">
+  <input type="submit" class="submit"  value="Imprimer OI"/>
+</form>

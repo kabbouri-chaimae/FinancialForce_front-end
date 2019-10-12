@@ -1,0 +1,43 @@
+<form  (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="row register-form">
+    <div class="col-md-10">
+      <input ngModel name="searchText" class="form-control" type="text" placeholder="Recherche par l'objet de la consultation" aria-label="Search">
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-success">Rechercher</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  
+  <div *ngFor="let consu of consultations | async ; let i = index">
+  <div class="row card" style="background-color: rgba(157, 186, 229, 0.897)" *ngIf="consu.objet == objetcherche" >
+      <div class="col-md-12 text center mb-5 mt-2 .font-weight-bold	" >
+        Objet de la consultation :<h1  style="color: rgb(212, 238, 214)">{{consu.objet}}</h1>
+      </div>
+
+      <div class="col-md-12 text center mb-5 mt-2">
+          Date de creation :<h4   style="color: darkgray"> {{consu.dateCreation}}</h4>
+      </div>
+      <div class="col-md-12 text center mb-5 mt-2">
+          Les sociétés consultées : <h4  style="color: darkgray">{{consu.fournisseurList.pname}}</h4>
+      </div>
+      <div class="col-md-12 text center mb-5 mt-2">
+          L'identifiant de la consultation : <h4  style="color: darkgray">{{consu.idConsultation}}</h4>
+      </div>
+    <div class="col-md-12">
+       Message de la consultation : <angular-editor  [(ngModel)]="consu.message" [config]="editorConfig" name="angularEditor" required=""></angular-editor>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div style="display: none">{{yourMethod()}}</div>
+  </div>
+  
+  </div>
+ 
+  <div class="row card" *ngIf="aa == 0" >
+    <h3 class="alert alert-danger"><strong >Pas de consultations correspondent a l'objet : </strong>{{ objetcherche }} </h3> 
+  </div>
+
+</form>

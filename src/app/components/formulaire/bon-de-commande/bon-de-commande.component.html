@@ -1,0 +1,114 @@
+<form  (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="row register-form">
+      <div class="col-md-10">
+        <input ngModel name="searchText" class="form-control" type="text" placeholder="Recherche par l'objet de la consultation" aria-label="Search" [ngModel]="objetcherche">
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-success">Rechercher</button>
+      </div>
+    </div>
+    <br>
+    <br>
+</form>
+<form (ngSubmit)="onPrint()" #g="ngForm">
+ <div class="font-weight-bold alert alert-danger"   *ngIf="hasResponse==false"  [ngStyle]="{color:'red'}">  {{messageError}}</div>
+
+
+
+ <div class="container" *ngIf= "hasResponse==true">
+    
+  <div class="row" >
+
+    <div class="col-md-12 mainDiv">
+
+          <div class="row BC-form">
+
+            <div class="col-md-6 ">
+
+              <div class="form-group input-group">
+                     
+                <label class="input-group-text">Nom Du fournisseur:</label>
+                <input type="text" class="form-control"  placeholder="Nom Du fournisseur * " value={{minpname}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">Adresse : </label>
+                <input type="text" class="form-control" placeholder="Adresse " value={{minAddress}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">Rc N:</label>
+                <input type="text" class="form-control" placeholder=" RC N°" value={{minprc}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">Patente N:</label>
+                <input type="text" class="form-control"  placeholder="Patente N°" value={{minppatente}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">IF N :</label>
+                <input type="text" class="form-control"  placeholder="IF N°" value={{minpif}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">CNSS :</label>
+                <input type="text" class="form-control"  placeholder="CNSS N°" value={{minpcnss}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">Compte bancaire:</label>
+                <input type="text" class="form-control"  placeholder="Compte" value={{minpbankaccount}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text"> Banque :</label>
+                <input type="text" class="form-control"  placeholder="Compte" value={{minpbank}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">ICE:</label>
+                <input type="text" class="form-control"  placeholder="ICE N°" value={{minpice}} />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">Devis N :</label>
+                <input type="text" class="form-control"  placeholder="Devis N°" value={{minpid}} />
+              </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+              
+              <div class="form-group input-group">
+                <label class="input-group-text">Budjet :</label>
+                <input type="text"  name="Budget" class="form-control" placeholder="prix" value={{minMentant}}  />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">Exercice:</label>
+                <input  type="text" name = "Exercice" class="form-control" placeholder="Exercice"  />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">Qantité :</label>
+                <input type="text"  name="Qty" class="form-control" placeholder="Qty"  />
+              </div>
+              <div class="form-group input-group">
+                  <label class="input-group-text"> % TVA :</label>
+                  <input type="text"  name="TVA" class="form-control" placeholder="tva"  />
+                </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">par :</label>
+                <input type="text"  name="PAR" class="form-control" placeholder="par" />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">lrg :</label>
+                <input type="text"  name="LRG" class="form-control" placeholder="lrg"  />
+              </div>
+              <div class="form-group input-group">
+                <label class="input-group-text">ligne :</label>
+                <input type="text"  name="Ligne" class="form-control" placeholder="ligne"   />
+              </div>
+
+              <input type="submit" class="submit"  value="Imprimer  BC"/>
+              
+
+            </div>
+          </div>
+    </div>
+  </div>
+ 
+  
+</div>
+</form>
